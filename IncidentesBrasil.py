@@ -3,9 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from ipywidgets import widgets, interactive
 
-# Configurando minha column
-st.column_config.Column(width="large")
-
 # Dataset
 df = pd.read_csv('Incidentes-Brasil.csv', delimiter=';')
 
