@@ -15,6 +15,9 @@ somaFraude = df.groupby('Ano')['Fraude'].sum()
 somaOutros = df.groupby('Ano')['Outros'].sum()
 somaTotal = df.groupby('Ano')['Total'].sum()
 
+# calculo dos aumentos percentuais dos totais
+aumento_percentual_total = [(somaTotal[i] - somaTotal[i-1])/ somaTotal[i-1] for i in range(2011, 2020)]
+
 # Calcula a porcentagem de acordo com o nome do ataque, usando as variaveis
 # soma+<nome do ataque>
 def ataque_porcentagem(ataque: float, ano: float)-> float:
@@ -27,7 +30,7 @@ def ataque_porcentagem(ataque: float, ano: float)-> float:
     return float((soma[ano] / somaTotal[ano]) * 100)
 
 
-st.write(" # Visualizações dos dados de incidentes que impresas brasileiras sofreram.")
+st.write(" # Visualizações dos dados de incidentes que empresas brasileiras sofreram.")
 
 # Selecionando o ano
 year = st.sidebar.selectbox("Selecione o Ano:", list(df['Ano'].unique()))
@@ -145,14 +148,24 @@ with st.expander("Outros"):
             Notificações de incidentes que não se enquadram nas demais categorias.
         ''')
 
-
+st.write('''
+        # Análise dos incidentes  
+        - É possível notar que o ataque do tipo _Scan_ foi um dos mais usados no período analisado. Um dos fatores para essa ocorrência é pelo fato de que o _Scan_ serve mais para analisar as vulnerabilidades de uma rede, para entender suas falhas e, em seguida, lançar outro tipo de ataque.
+        - O ataque do tipo _Worm_ não foi alarmante, mas seguiu uma linearidade nos anos, ou seja, não houve um crescimento / decrescimento significante.
+        - Nos três primeiros anos da análise, quase não houve ataques do tipo _DDoS_, mas, em 2014, houve um salto curioso. Nesse ano, houve o vazamento de dados da Sony - gigante marca do mercado mundial - que contribui significativamente para o aumento de diversos tipos de ataque, entre eles a _Fraude_ e _DDoS_
+        - A _Invasão_ é um dos ataques que mais diminuiu ao longo dos anos, devido à melhora nos sistemas de segurança da internet, como atualizações no OpenSSL.
+        - Similarmente à _Invasão_, os ataques do tipo _Web_ tem diminuído, menos que o ataque citado anteriomente. Uma das razões disso é a melhoria nos protocolos que regem a conexão web (HTTPS)
+        - Nos primeiros anos da análise, a _Fraude_ foi crescendo até que alcançou seu ápice em 2014, após isso, foi decrescendo graças ao aumento da informação sobre os ataques por _Phishing_ e infecções por _Malware_.
+    ''')
 
 # Pequena apuracao de dados de cada tipo de ataque
 with st.sidebar:
     # não faz sentido fazer uma analise curta do Total, já que 100% dos ataques totais serão do tipo total.
-    if ataque == "Total":
+    if ataque == "Total" and year > 2010:
+        st.write("No ano de {}, tivemos uma variação em relação ao ano passado de {:.2f}% do total de ataques"
+                .format(year, aumento_percentual_total[year % 2011]))
+    elif ataque == "Total" and year == 2010:
         st.empty()
-    
     # no ano de 2010, não teremos o cálculo da variação percentual, uma vez que não temos os dados de 2009.
     elif year == 2010:
         st.write("No ano de {}, apenas {:.2f}% dos ataques totais foram do tipo {}. Como nao temos dados de 2009, nao conseguimos fazer a variacao percentual =("
