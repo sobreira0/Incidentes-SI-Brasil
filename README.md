@@ -5,7 +5,7 @@
 - Guilherme Vasconcellos Sobreira de Carvalho
 - Rafael Mello dos Santos
 - Lucas de Moraes Brandão
-- Felipe de Oliveira Alves
+- Felipe de Oliveira Alves Ferreira
 
 # O que foi feito?
 Foi feito uma análise de um dataset no [Kaggle](https://www.kaggle.com/datasets/rodrigoriboldi/incidentes-de-segurana-da-informao-no-brasil) que explora os incidentes de segurança da informação no Brasil, os dados foram coletados pelo [CERT.BR](https://stats.cert.br/incidentes/).
