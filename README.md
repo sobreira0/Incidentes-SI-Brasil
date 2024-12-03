@@ -16,7 +16,7 @@ Foi feito uma análise de um dataset no [Kaggle](https://www.kaggle.com/datasets
 - [Pandas](https://github.com/pandas-dev/pandas)
 - [Streamlit](https://github.com/streamlit/streamlit)
 - [Pigar](https://github.com/damnever/pigar) 
-* Note que é preciso ter também o [Numpy](https://github.com/numpy/numpy) na versão 1.26.3 ou superior.
+* Note que é preciso ter também o [Numpy](https://github.com/numpy/numpy) na versão 1.26.3 ou 1.26.4.
 
 # Como rodar o projeto?
 Primeiro, crie um ambiente virtual (venv)
