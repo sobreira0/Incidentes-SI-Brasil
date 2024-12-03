@@ -2,9 +2,23 @@
 ## Projeto final da matéria Organização de Dados, do curso de Ciência da Computação da turma 2024.1
 
 # Integrantes:
-<a href="https://github.com/sobreira0/Incidentes-SI-Brasil/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=sobreira0/Incidentes-SI-Brasil" />
-</a>
+<div class="photos">
+<a href="https://github.com/sobreira0"> 
+  <img href="https://avatars.githubusercontent.com/u/94868938?v=4"> 
+</a> 
+<div class="photos">
+<a href="https://github.com/lucasm-brandao"> 
+  <img href="https://avatars.githubusercontent.com/u/165212329?v=4"> 
+</a> 
+<div class="photos">
+<a href="https://github.com/FelipeCCcode"> 
+  <img href="https://avatars.githubusercontent.com/u/174892225?v=4"> 
+</a> 
+<div class="photos">
+<a href="https://github.com/rafaellms0"> 
+  <img href="https://avatars.githubusercontent.com/u/169465557?v=4"> 
+</a> 
+</div>
 
 - Guilherme Vasconcellos Sobreira de Carvalho
 - Rafael Mello dos Santos
@@ -40,3 +54,5 @@ Para ver o dashboard feito no streamlit:
 ```bash
 streamlit run ./IncidentesBrasil.py
 ```
+
+
