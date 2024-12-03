@@ -5,6 +5,7 @@
 <a href="https://github.com/sobreira0/Incidentes-SI-Brasil/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=sobreira0/Incidentes-SI-Brasil" />
 </a>
+
 - Guilherme Vasconcellos Sobreira de Carvalho
 - Rafael Mello dos Santos
 - Lucas de Moraes Brandão
