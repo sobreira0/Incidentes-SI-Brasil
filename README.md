@@ -19,20 +19,29 @@ Foi feito uma análise de um dataset no [Kaggle](https://www.kaggle.com/datasets
 * Note que é preciso ter também o [Numpy](https://github.com/numpy/numpy) na versão 1.26.3 ou 1.26.4.
 
 # Como rodar o projeto?
-Primeiro, crie um ambiente virtual (venv)
+## Primeiro, crie um ambiente virtual (venv)
 ```bash
 python3 -m venv .venv
 ```
-Depois, ative o ambiente virtual
+
+## Depois, ative o ambiente virtual
+
+### Windows
+```bash
+.venv/Scripts/activate
+```
+### MacOS / Linux
 ```bash
 source .venv/bin/activate
 ```
-Em seguida, instale as bibliotecas
+
+## Em seguida, instale as bibliotecas
 ```bash
 pip install -r requirements.txt
 ```
-Pronto, agora você já pode visualizar o projeto tranquilamente. 
-Para ver o dashboard feito no streamlit:
+## Pronto, agora você já pode visualizar o projeto tranquilamente. 
+
+# Para ver o dashboard feito no streamlit
 ```bash
 streamlit run ./IncidentesBrasil.py
 ```
